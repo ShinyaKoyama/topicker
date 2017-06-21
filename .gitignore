@@ -2,3 +2,6 @@
 /config/app.php
 /tmp/*
 /logs/*
+ssl/bb429beec47409-cert.pem
+ssl/bb429beec47409-key.pem
+ssl/cleardb-ca.pem
