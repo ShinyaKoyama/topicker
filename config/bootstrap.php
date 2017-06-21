@@ -75,6 +75,11 @@ use Cake\Utility\Security;
 try {
     Configure::config('default', new PhpConfig());
     Configure::load('app', 'default', false);
+
+    if(isset($_ENV['CAKE_ENV'])) {
+        Configure::load('app_'.$_ENV['CAKE_ENV'], 'default');
+    }
+
 } catch (\Exception $e) {
     exit($e->getMessage() . "\n");
 }
@@ -93,6 +98,10 @@ try {
 if (Configure::read('debug')) {
     Configure::write('Cache._cake_model_.duration', '+2 minutes');
     Configure::write('Cache._cake_core_.duration', '+2 minutes');
+}
+
+if(Configure::read('debug') && !isset($_ENV['CAKE_ENV'])) {
+	Plugin::load('DebugKit', ['bootstrap' => true]);
 }
 
 /*
