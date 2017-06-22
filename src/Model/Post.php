@@ -1,6 +1,5 @@
 <?php
 App::uses('AppModel', 'Model');
-
 class Post extends AppModel {
     // WordPressのDB設定を使う。
     public $useDbConfig = 'wordpress';
