@@ -1,5 +1,6 @@
 <?php
-class PostsController {
+App::uses('AppController', 'Controller');
+class PostsController extends AppController {
     // actionのみの記述
     public function index() {
         // 公開された記事＋予約投稿になっていて公開時間になった記事を表示する。
