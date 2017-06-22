@@ -1,5 +1,7 @@
 <?php
-App::uses('AppController', 'Controller');
+// App::uses('AppController', 'Controller');
+namespace App\Controller;
+use App\Controller\AppController;
 class PostsController extends AppController {
     // actionのみの記述
     public function index() {
