@@ -7,7 +7,7 @@ public $default = array(
     'host'       => $db['host'],
     'login'      => $db['user'],
     'password'   => $db['pass'],
-    'database'   => 'cakephp_db',
+    'database'   => 'heroku_84fa60efde6596c',
     'prefix'     => '',
     'encoding'   => 'utf8',
 );
@@ -19,7 +19,7 @@ public $wordpress = array(
     'host'       => $db['host'],
     'login'      => $db['user'],
     'password'   => $db['pass'],
-    'database'   => 'wp_db',
+    'database'   => 'heroku_84fa60efde6596c',
     'prefix'     => 'wp_',
     'encoding'   => 'utf8',
 );
