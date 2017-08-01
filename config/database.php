@@ -2,7 +2,7 @@
 $db = parse_url(env('DATABASE_URL'));
 // CakePHPで使用するDBの設定
 public $default = array(
-    'datasource' => 'Database/Mysql',
+    'datasource' => 'Database/Postgres',
     'persistent' => false,
     'host'       => $db['host'],
     'login'      => $db['user'],
@@ -14,7 +14,7 @@ public $default = array(
 
 // WordPressで使用するDBの設定
 public $wordpress = array(
-    'datasource' => 'Database/Mysql',
+    'datasource' => 'Database/Postgres',
     'persistent' => false,
     'host'       => $db['host'],
     'login'      => $db['user'],
