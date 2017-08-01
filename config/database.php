@@ -1,5 +1,5 @@
 <?php
-$db = parse_url(env('CLEARDB_DATABASE_URL'));
+$db = parse_url(env('DATABASE_URL'));
 // CakePHPで使用するDBの設定
 public $default = array(
     'datasource' => 'Database/Mysql',
@@ -7,7 +7,7 @@ public $default = array(
     'host'       => $db['host'],
     'login'      => $db['user'],
     'password'   => $db['pass'],
-    'database'   => 'heroku_84fa60efde6596c',
+    'database'   => substr($db['path'], 1),
     'prefix'     => '',
     'encoding'   => 'utf8',
 );
@@ -19,7 +19,7 @@ public $wordpress = array(
     'host'       => $db['host'],
     'login'      => $db['user'],
     'password'   => $db['pass'],
-    'database'   => 'heroku_84fa60efde6596c',
+    'database'   => substr($db['path'], 1),
     'prefix'     => 'wp_',
     'encoding'   => 'utf8',
 );

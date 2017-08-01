@@ -1,5 +1,5 @@
 <?php
-$db = parse_url(env('CLEARDB_DATABASE_URL'));
+$db = parse_url(getenv('DATABASE_URL'));
 return [
     'debug' => false,
     'Security' => [
@@ -8,7 +8,8 @@ return [
     'Datasources' => [
         'default' => [
             'className' => 'Cake\Database\Connection',
-            'driver' => 'Cake\Database\Driver\Mysql',
+            // 'driver' => 'Cake\Database\Driver\Postgres',
+            'driver' => 'pgsql',
             'persistent' => false,
             'host' => $db['host'],
             'username' => $db['user'],
